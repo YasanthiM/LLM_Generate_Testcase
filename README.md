@@ -1,35 +1,67 @@
-# AskAI Lambda Function Tests
+# LLM Lambda Functions Test Suite
 
-This repository contains test cases for the AskAI Lambda function.
+This repository contains test cases for various Lambda functions in the LLM project.
 
 ## Project Structure
 ```
 .
 ├── tests/
 │   ├── __init__.py
-│   └── test_ask_ai.py
+│   ├── test_ask_ai.py
+│   ├── dashboard.py
+│   ├── dashboard.test.js
+│   ├── launchTrain.test.js
+│   ├── aiclubChatBot.test.js
+│   └── askAi.test.js
 ├── requirements.txt
 └── README.md
 ```
 
-## Test Cases
+## Test Suites
 
-The test suite includes the following test cases:
+The project includes test suites for the following Lambda functions:
 
-1. `test_ask_ai_with_service_id`: Tests the function with a service ID
-2. `test_ask_ai_with_prediction_id`: Tests the function with a prediction ID
-3. `test_ask_ai_with_timestamps`: Tests the function with timestamp filters
-4. `test_ask_ai_monitor_mode`: Tests the monitor mode for super users
-5. `test_ask_ai_missing_required_params`: Tests error handling for missing parameters
+1. **AskAI Lambda Tests**
+   - Testing service ID functionality
+   - Testing prediction ID handling
+   - Testing timestamp filters
+   - Testing monitor mode for super users
+   - Error handling for missing parameters
+
+2. **Launch Train Lambda Tests**
+   - Testing model training initialization
+   - Testing training parameters validation
+   - Testing training status monitoring
+
+3. **Dashboard Lambda Tests**
+   - Testing data visualization endpoints
+   - Testing metrics aggregation
+   - Testing user-specific dashboard views
+
+4. **AI Club ChatBot Lambda Tests**
+   - Testing chat interactions
+   - Testing response generation
+   - Testing context handling
 
 ## Running Tests
 
-1. Install dependencies:
+### Python Tests
+1. Install Python dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run tests:
+2. Run Python tests:
 ```bash
-pytest tests/test_ask_ai.py -v
+pytest tests/*.py -v
 ```
+
+### JavaScript Tests
+1. Install Node dependencies:
+```bash
+npm install
+```
+
+2. Run JavaScript tests:
+```bash
+npm test
