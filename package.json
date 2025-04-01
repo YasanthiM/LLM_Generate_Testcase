@@ -1,0 +1,11 @@
+{
+  "name": "windsurf",
+  "version": "1.0.0",
+  "description": "Windsurf project tests",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
